@@ -8,10 +8,8 @@ repos:
           - id: check-json
           - id: check-added-large-files
     - repo: https://github.com/pre-commit/mirrors-eslint
-      rev: 'v7.8.1'
+      rev: ''
       hooks:
           - id: eslint
-            name: eslint
-            entry: npm run lint
-            language: node
-            types: [javascript, jsx, tsx]
+            files: \.[jt]sx?$
+            types: [file]
