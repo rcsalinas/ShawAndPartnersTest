@@ -12,6 +12,6 @@ repos:
       hooks:
           - id: eslint
             name: eslint
-            entry: npx eslint
+            entry: npm run lint
             language: node
             types: [javascript, jsx, tsx]
