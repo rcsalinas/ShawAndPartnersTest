@@ -47,7 +47,9 @@
         "coveragePathIgnorePatterns": [
             "/node_modules/",
             "/dist/",
-            "/test/"
+            "/test/",
+            "/src/app.ts",
+            "/src/routes/*"
         ],
         "collectCoverageFrom": [
             "src/**/*.ts"

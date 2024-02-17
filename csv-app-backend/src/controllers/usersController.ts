@@ -10,7 +10,7 @@ export const searchUsers = async (
 ): Promise<Response> => {
     const query = req.query.q
 
-    if (typeof query !== 'string' && query !== undefined) {
+    if (typeof query !== 'string' && query !== null && query !== undefined) {
         return res.status(500).json({ message: 'Invalid search query' })
     }
     if (query === null || query === undefined || query === '') {
