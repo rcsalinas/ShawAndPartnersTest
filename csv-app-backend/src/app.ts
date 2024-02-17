@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import usersRoutes from './routes/userRoutes'
-import fileRoutes from "./routes/fileRoutes"
+import fileRoutes from './routes/fileRoutes'
 
 const app = express()
 

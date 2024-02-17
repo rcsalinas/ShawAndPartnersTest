@@ -10,13 +10,13 @@ repos:
     -   id: name-tests-test
     -   id: requirements-txt-fixer
   - repo: https://github.com/prettier/prettier
-    rev: 2.5.0  
+    rev: 2.5.0
     hooks:
       - id: prettier
         args: [--write, './**/*.ts', './**/*.tsx']
   - repo: https://github.com/reviewdog/action-eslint
     rev: master
- 
+
     hooks:
       - id: eslint
         args: [--fix]
