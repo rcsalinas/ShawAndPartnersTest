@@ -4,7 +4,10 @@ import { csvData } from '../data/csvData'
 
 const data: CsvRow[] = csvData as CsvRow[]
 
-export const searchUsers = (req: Request, res: Response): Response => {
+export const searchUsers = async (
+    req: Request,
+    res: Response
+): Promise<Response> => {
     const query = req.query.q
 
     if (typeof query !== 'string' && query !== undefined) {
