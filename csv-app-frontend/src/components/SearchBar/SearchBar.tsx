@@ -3,9 +3,10 @@ import SearchIcon from '@mui/icons-material/Search'
 
 interface SearchBarProps {
 	query: string
+	handleQueryChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const SearchBar = ({ query }: SearchBarProps) => {
+const SearchBar = ({ query, handleQueryChange }: SearchBarProps) => {
 	return (
 		<div
 			style={{
@@ -15,14 +16,14 @@ const SearchBar = ({ query }: SearchBarProps) => {
 				borderRadius: 25,
 				padding: '5px 10px',
 				border: '2px solid #555',
-				width: '100%',
+				width: '60%',
 			}}
 		>
 			<InputBase
 				placeholder="Search..."
 				inputProps={{ 'aria-label': 'search' }}
 				sx={{ flexGrow: 1, ml: 1, color: '#fff' }}
-				onChange={() => {}}
+				onChange={handleQueryChange}
 				value={query}
 			/>
 			<IconButton aria-label="search" sx={{ p: 0, color: '#fff' }}>

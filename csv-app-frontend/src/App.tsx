@@ -20,8 +20,11 @@ function App() {
 				<AppBar />
 				<Container
 					component="main"
-					maxWidth="sm"
-					sx={{ mb: 4, height: '70vh' }}
+					sx={{
+						mb: 4,
+						alignItems: 'center',
+						width: '100%',
+					}}
 				>
 					<SearchPage />
 				</Container>
