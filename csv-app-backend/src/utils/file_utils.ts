@@ -23,12 +23,7 @@ export async function processDataFromCSV(
         fs.createReadStream(file.path)
             .pipe(csvParser())
             .on('data', (row: CsvRow) => {
-                const exists = data.some((existingRow) => {
-                    return existingRow.name === row.name
-                })
-                if (!exists) {
-                    data.push(row)
-                }
+                data.push(row)
             })
             .on('end', () => {
                 console.log('CSV data:', data)

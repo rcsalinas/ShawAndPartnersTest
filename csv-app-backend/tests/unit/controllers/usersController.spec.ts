@@ -11,6 +11,23 @@ const mockResponse = (): Response => {
     return res
 }
 
+jest.mock('../../../src/data/csvData.ts', () => ({
+    csvData: [
+        {
+            name: 'John Doe',
+            city: 'New York',
+            country: 'USA',
+            favorite_sport: 'Basketball',
+        },
+        {
+            name: 'Jane Smith',
+            city: 'London',
+            country: 'UK',
+            favorite_sport: 'Football',
+        },
+    ],
+}))
+
 describe('searchUsers function', () => {
     const data = [
         {
